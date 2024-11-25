@@ -48,7 +48,7 @@ class TwoStack{
         if(top2<size){
             int ans = arr[top2];
             top2++;
-            return ans;
+            return  ans;
         }
         else return -1;
 
