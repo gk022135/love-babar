@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<queue>
 
 using namespace std;
 
@@ -40,11 +41,34 @@ node* buildTree(node* root) {
     return root;
 }
 
+void LevelOrderTraversal(node* root){
+    //for level order travsersal use queue Data Struture
+    queue<node*> q;
+    q.push(root);
+
+    while(!q.empty()){
+        node * temp = q.front();
+        cout<<temp -> data <<" ";
+        q.pop();
+        if(temp -> left){
+            q.push(temp -> left);
+        }
+        if(temp -> right){
+            q.push(temp -> right);
+        }
+    }
+
+
+}
 int main() {
     node* root = NULL;
 
     // Creating tree
     root = buildTree(root);
+
+    //level order traversal;
+    // 1 3 4 6 8 -1 0 3
+    LevelOrderTraversal(root);
 
     return 0;
 }
