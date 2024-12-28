@@ -44,11 +44,13 @@ int HeightBST(Node *root)
         return 0;
 
     int leftTreeHeight = HeightBST(root->left);
-    cout << "height of left Binary tree is " << leftTreeHeight << endl;
     int rightTreeheight = HeightBST(root->right);
+
+    
+    cout << "height of left Binary tree is " << leftTreeHeight << endl;
     cout << "height of right Binary tree is " << rightTreeheight << endl;
 
-    return 1 + max(leftTreeHeight,rightTreeheight);
+    return 1+max(leftTreeHeight ,rightTreeheight);
 }
 
 int main(){
@@ -58,6 +60,6 @@ int main(){
     for(int i : datas){
         root = InsertInBT(root,i);
     }
-    cout<<"maximum height of binary tree is "<<HeightBST<<endl;
+    cout<<"maximum height of binary tree is "<<HeightBST(root)<<endl;
     return 0;
 }
