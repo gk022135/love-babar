@@ -44,7 +44,7 @@ bool TargetSum(Node* root, int target){
 }
 
 int main(){
-    vector<int> datas = {5,4,8,11,NULL,13,4,22,2,NULL,NULL,NULL,1};
+    vector<int> datas = {5,4,8,11,0,13,4,22,2,0,0,0,1};
     int target = 22;
     Node* root = nullptr;
 
