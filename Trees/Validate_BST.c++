@@ -37,10 +37,10 @@ Node* InsertionInBST(Node* root,int data){
         return new Node(data);
     }
     if(data < root->data){
-        root = InsertionInBST(root->left, data);
+        root->left = InsertionInBST(root->left, data);
     }
     else{
-        root = InsertionInBST(root->right, data);
+        root->right = InsertionInBST(root->right, data);
     }
     return root;
 }
@@ -54,5 +54,8 @@ int main(){
         root = InsertionInBST(root,i);
     }
     cout<<endl;
-    cout<<obj.valdateBST(root,INT_MIN, INT_MAX)<<"\n";
+    cout<<"given data is for valid binary search tree "<<obj.valdateBST(root,INT_MIN, INT_MAX)<<"\n";
 }
+
+
+//implementation done successefully
